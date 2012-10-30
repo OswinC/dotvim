@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/oswin/training/Lab_PrjCodeMgm/test'
+let g:netrw_dirhist_2='/home/spark.hsieh/training/topic3/socket/socket_service/app/tcp_client_timeout'
+let g:netrw_dirhist_3='/home/spark.hsieh/training/topic3/handle_base/simple_snapshotd/src'
+let g:netrw_dirhist_4='/home/oswin/svnroot/Project/DM365/IP8172/trunk/rootfs/www/include'
+let g:netrw_dirhist_5='/home/oswin/svnroot/Project/DM365/IP8172/trunk/apps/app_cluster/utility/sysparam/src'
+let g:netrw_dirhist_6='/home/oswin/training/Lab_Anubis/0100b/apps/app_cluster/vca'
+let g:netrw_dirhist_7='/home/oswin/svnroot/Project/DM365/IP8172/trunk/release/rootfs/usr/share/www/cgi-bin/admin'
+let g:netrw_dirhist_8='/home/oswin/makcomm'

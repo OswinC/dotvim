@@ -1,0 +1,3 @@
+tcomment.vba: call delete('/home/oswin/.vim/doc/tcomment.txt')|call delete('/home/oswin/.vim/plugin/tcomment.vim')|call delete('/home/oswin/.vim/autoload/tcomment.vim')
+hints_man3.vba: call delete('/home/oswin/.vim/ftplugin/c/hints_man3.vim')
+hints_man2.vba: call delete('/home/oswin/.vim/ftplugin/c/hints_man2.vim')
