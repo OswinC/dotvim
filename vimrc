@@ -2,31 +2,28 @@
 call pathogen#runtime_append_all_bundles()
 
 " NERDTree stuff
-nnoremap <silent> <F5> :NERDTree<CR>
-"nnoremap <silent> nm :NERDTreeMirror<CR>
-
-" Taglist stuff
-nnoremap <silent> tl :TlistToggle<CR>
-let Tlist_Exist_OnlyWindow = 1
-let Tlist_Sort_Type = " order"
-let Tlist_Compart_Format = 1 
-let Tlist_GainFocus_On_ToggleOpen = 1 
-let Tlist_Display_Tag_Scope = 1 
+nnoremap <F5> :NERDTree<CR>
+"nnoremap nm :NERDTreeMirror<CR>
 
 " Winmanager stuff
-"nnoremap <silent> wm :WMToggle<cr>
+"nnoremap wm :WMToggle<cr>
 "let g:winManagerWindowLayout= 'NERDTree|TagList'
 
+nmap <F8> :TagbarToggle<CR>
+
 " Cscope stuff
-nnoremap <silent> <C-\>s :cs find s <cword><CR> 
-nnoremap <silent> <C-\>g :cs find g <cword><CR> 
-nnoremap <silent> <C-\>c :cs find c <cword><CR> 
-nnoremap <silent> <C-\>t :cs find t <cword><CR> 
-nnoremap <silent> <C-\>e :cs find e <cword><CR> 
-nnoremap <silent> <C-\>f :cs find f <cfile><CR> 
-nnoremap <silent> <C-\>i :cs find i <cfile><CR> 
-nnoremap <silent> <C-\>d :cs find d <cword><CR>
+nnoremap <C-\>s :cs find s <cword><CR> 
+nnoremap <C-\>g :cs find g <cword><CR> 
+nnoremap <C-\>c :cs find c <cword><CR> 
+nnoremap <C-\>t :cs find t <cword><CR> 
+nnoremap <C-\>e :cs find e <cword><CR> 
+nnoremap <C-\>f :cs find f <cfile><CR> 
+nnoremap <C-\>i :cs find i <cfile><CR> 
+nnoremap <C-\>d :cs find d <cword><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+" NERDCommenter stuff
+filetype plugin indent on
 
 " "Minibufexpl stuff
 " let g:miniBufExplMapCTabSwitchBufs = 1
@@ -41,9 +38,9 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let g:acp_behaviorSnipmateLength = 1
 
 " Lid stuff
-nnoremap <silent> <F4> :Lid
-let LID_File='/home/oswin/iddbs/ID_system,/home/oswin/iddbs/ID_horus'
-let LID_Jump_To_Match=0
+"nnoremap <F4> :Lid
+"let LID_File='/home/oswin/iddbs/ID_system,/home/oswin/iddbs/ID_horus'
+"let LID_Jump_To_Match=0
 
 " SnipMate stuff
 
@@ -67,7 +64,7 @@ set foldmethod=indent
 set foldlevel=1000
 set foldnestmax=5
 
-"nnoremap <silent> gT :tabp<CR>
+"nnoremap gT :tabp<CR>
 "inoremap {<CR>   {<CR>}<ESC>O 
 "inoremap (<CR>   (<CR>)<ESC>O
 "inoremap [<CR>   [<CR>]<ESC>O
