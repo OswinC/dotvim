@@ -25,6 +25,16 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 " NERDCommenter stuff
 filetype plugin indent on
 
+" Clang_Complete stuff
+let g:clang_complete_auto=1
+let g:clang_auto_select = 1
+let g:clang_use_library=1
+let g:clang_library_path=$HOME."/lib"
+let g:clang_snippets=1
+let g:clang_conceal_snippets=1
+let g:clang_periodic_quickfix=1
+let g:clang_hl_errors=1
+
 " "Minibufexpl stuff
 " let g:miniBufExplMapCTabSwitchBufs = 1
 
