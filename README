@@ -12,7 +12,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
 	git submodule init
 	git submodule update
 
-With full features of this vim environment, you need:
+With full features of this vim environment, following programs/libraries/settings are needed:
 
 	llvm/clang
 	cscope
