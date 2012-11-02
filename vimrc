@@ -28,11 +28,6 @@ filetype plugin indent on
 " "Minibufexpl stuff
 " let g:miniBufExplMapCTabSwitchBufs = 1
 
-" New-omni-completion stuff
-"filetype plugin indent on
-"set completeopt+=longest,menu,preview
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 " Autocomplpop stuff
 "let g:acp_completeOption = '.,w,b,u,t,i,k'
 "let g:acp_behaviorSnipmateLength = 1
