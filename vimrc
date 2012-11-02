@@ -25,6 +25,16 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 " NERDCommenter stuff
 filetype plugin indent on
 
+" Clang_Complete stuff
+let g:clang_complete_auto=1
+let g:clang_auto_select = 1
+let g:clang_use_library=1
+let g:clang_library_path=$HOME."/lib"
+let g:clang_snippets=1
+let g:clang_conceal_snippets=1
+let g:clang_periodic_quickfix=1
+let g:clang_hl_errors=1
+
 " "Minibufexpl stuff
 " let g:miniBufExplMapCTabSwitchBufs = 1
 
@@ -71,6 +81,20 @@ vmap R "_d
 " For Colorscheme
 set bg=dark
 colorscheme peaksea_new
+
+" status line
+set laststatus=2 
+set statusline=%4*%<\ %1*[%F] 
+set statusline+=%4*\ %5*[%{&encoding}, " encoding 
+set statusline+=%{&fileformat}]%m " file format 
+set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \> 
+highlight User1 ctermfg=blue 
+highlight User2 term=underline cterm=underline ctermfg=green 
+highlight User3 term=underline cterm=underline ctermfg=yellow 
+highlight User4 term=underline cterm=underline ctermfg=white 
+highlight User5 ctermfg=cyan 
+highlight User6 ctermfg=white 
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " [ Tab Operation Mac-Mapping by Klaymen ]                                   {{{
