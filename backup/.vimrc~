@@ -153,10 +153,10 @@ let g:showmarks_auto_toggle = 0
 nnoremap <silent> mo :ShowMarksOn<CR>
 nnoremap <silent> mt :ShowMarksToggle<CR>
 
-hi ShowMarksHLl ctermfg=red   ctermbg=black
-hi ShowMarksHLu ctermfg=green ctermbg=black
-hi ShowMarksHLo ctermfg=red   ctermbg=black
-hi ShowMarksHLm ctermfg=red   ctermbg=black
+"hi ShowMarksHLl ctermfg=red   ctermbg=black
+"hi ShowMarksHLu ctermfg=green ctermbg=black
+"hi ShowMarksHLo ctermfg=red   ctermbg=black
+"hi ShowMarksHLm ctermfg=red   ctermbg=black
 
 """"""""""""""""""""""""""""""
 " wokmarks
