@@ -62,7 +62,7 @@ let g:clang_hl_errors=1
 
 set nu
 
-let mapleader = ","
+let mapleader = "0"
 
 set autoindent     " Auto Indent
 set smartindent    " Smart Indent
@@ -139,10 +139,6 @@ highlight User3 term=underline cterm=underline ctermfg=yellow
 highlight User4 term=underline cterm=underline ctermfg=white 
 highlight User5 ctermfg=cyan 
 highlight User6 ctermfg=white 
-
-" WinMerge-style (Alt + hjkl) mapping for vimdiff
-nmap j ]c
-nmap k [c
 
 
 """"""""""""""""""""""""""""""
