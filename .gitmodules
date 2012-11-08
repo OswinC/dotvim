@@ -13,3 +13,9 @@
 [submodule "bundle/clangcomplete"]
 	path = bundle/clangcomplete
 	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/showmarks"]
+	path = bundle/showmarks
+	url = git://github.com/bootleq/ShowMarks.git

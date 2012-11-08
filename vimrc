@@ -49,11 +49,15 @@ let g:clang_hl_errors=1
 
 " SnipMate stuff
 
-"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Settings for Vim native (non-plugin) functions
 "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nu
+
+let mapleader = ","
 
 set autoindent     " Auto Indent
 set smartindent    " Smart Indent
@@ -69,6 +73,33 @@ set foldmethod=indent
 set foldlevel=1000
 set foldnestmax=5
 
+set wildmenu
+"in ESC: (command mode), disbled auto completion next part, Cool!
+set wildmode=list:longest
+set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
+set ignorecase
+set smartcase
+
+" Use Ctrl+hjkl to switch between Window
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+nmap - <C-w>-
+nmap + <C-w>+
+
+" Define different behavior in left/right window
+if has("autocmd")
+	autocmd BufEnter,BufLeave *
+	\     if winnr() == 1 |
+	\        nmap < <C-w><|
+	\        nmap > <C-w>>|
+	\     else            |
+	\        nmap < <C-w>>|
+	\        nmap > <C-w><|
+	\     endif           |
+endif
+
 "nnoremap gT :tabp<CR>
 "inoremap {<CR>   {<CR>}<ESC>O 
 "inoremap (<CR>   (<CR>)<ESC>O
@@ -82,6 +113,15 @@ vmap R "_d
 set bg=dark
 colorscheme peaksea_new
 
+" Backups and swapfile
+set backup
+set backupdir=$HOME/.vim/backup/
+silent execute '!mkdir -p $HOME/.vim/backup'
+
+syntax on
+set vb
+set noswapfile
+
 " status line
 set laststatus=2 
 set statusline=%4*%<\ %1*[%F] 
@@ -94,6 +134,38 @@ highlight User3 term=underline cterm=underline ctermfg=yellow
 highlight User4 term=underline cterm=underline ctermfg=white 
 highlight User5 ctermfg=cyan 
 highlight User6 ctermfg=white 
+
+" WinMerge-style (Alt + hjkl) mapping for vimdiff
+nmap j ]c
+nmap k [c
+
+
+""""""""""""""""""""""""""""""
+" ShowMarks
+""""""""""""""""""""""""""""""
+let g:showmarks_include='abcdefghijklmnopqrtuvwxyz' . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let g:showmarks_ignore_type="h"
+let g:showmarks_textlower="\t"
+let g:showmarks_textupper="\t"
+let g:showmarks_textother="\t"
+let g:showmarks_auto_toggle = 0
+nnoremap <silent> mo :ShowMarksOn<CR>
+nnoremap <silent> mt :ShowMarksToggle<CR>
+
+hi ShowMarksHLl ctermfg=red   ctermbg=black
+hi ShowMarksHLu ctermfg=green ctermbg=black
+hi ShowMarksHLo ctermfg=red   ctermbg=black
+hi ShowMarksHLm ctermfg=red   ctermbg=black
+
+""""""""""""""""""""""""""""""
+" wokmarks
+""""""""""""""""""""""""""""""
+let g:wokmarks_do_maps = 0
+let g:wokmarks_pool = "abcdefghijklmnopqrtuvwxyz"
+map mm <Plug>ToggleMarkWok
+map mj <Plug>NextMarkWok
+map mk <Plug>PrevMarkWok
+autocmd User WokmarksChange :ShowMarksOn
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
