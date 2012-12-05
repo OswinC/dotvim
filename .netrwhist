@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/oswin/svnroot/Project/DM365/FD8162/tags/FD8162-VVTK-0104b/apps/app_cluster/media/libs/dm365/imgproc/imgproc.general'
+let g:netrw_dirhist_2='/home/oswin/svnroot/Project/DM365/FD8163-8363/trunk/apps/app_cluster/manager/stormgr'
+let g:netrw_dirhist_3='/home/oswin/svnroot/Project/DM365/FD8163-8363/trunk/apps/app_cluster/network/fdcgi'
+let g:netrw_dirhist_4='/home/oswin/tmp'

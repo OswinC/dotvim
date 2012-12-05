@@ -1,3 +1,5 @@
+set nocompatible
+
 " Pathogen stuff, pathogen needs to be called before filetyp on
 call pathogen#runtime_append_all_bundles()
 
@@ -53,6 +55,35 @@ let g:clang_hl_errors=1
 "let LID_Jump_To_Match=0
 
 " SnipMate stuff
+
+
+" Showmarks stuff
+let g:showmarks_include='abcdefghijklmnopqrtuvwxyz' . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let g:showmarks_ignore_type="h"
+let g:showmarks_textlower="\t"
+let g:showmarks_textupper="\t"
+let g:showmarks_textother="\t"
+let g:showmarks_auto_toggle = 0
+nnoremap <silent> mo :ShowMarksOn<CR>
+nnoremap <silent> mt :ShowMarksToggle<CR>
+
+hi ShowMarksHLl ctermfg=red   ctermbg=black
+hi ShowMarksHLu ctermfg=green ctermbg=black
+hi ShowMarksHLo ctermfg=red   ctermbg=black
+hi ShowMarksHLm ctermfg=red   ctermbg=black
+
+" Wokmarks stuff
+let g:wokmarks_do_maps = 0
+let g:wokmarks_pool = "abcdefghijklmnopqrtuvwxyz"
+map mm <Plug>ToggleMarkWok
+map mj <Plug>NextMarkWok
+map mk <Plug>PrevMarkWok
+autocmd User WokmarksChange :ShowMarksOn
+
+" DirDiff stuff
+let g:DirDiffExcludes = "*.git,*.svn,.*.swp,tags,cscope.*"
+let g:DirDiffWindowSize = 6
+let g:DirDiffAddArgs = "-w" 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,10 +145,6 @@ endif
 nmap R "_dd
 vmap R "_d
 
-" For Colorscheme
-set bg=dark
-colorscheme peaksea_new
-
 " Backups and swapfile
 set backup
 set backupdir=$HOME/.vim/backup/
@@ -126,6 +153,14 @@ silent execute '!mkdir -p $HOME/.vim/backup'
 syntax on
 set vb
 set noswapfile
+
+" For Colorscheme
+set bg=dark
+colorscheme peaksea_new
+
+" highlight the cursorline
+set cursorline
+hi cursorline cterm=bold ctermbg=5
 
 " status line
 set laststatus=2 
@@ -143,34 +178,6 @@ highlight User6 ctermfg=white
 " WinMerge-style (Alt + hjkl) mapping for vimdiff
 nmap j ]c
 nmap k [c
-
-
-""""""""""""""""""""""""""""""
-" ShowMarks
-""""""""""""""""""""""""""""""
-let g:showmarks_include='abcdefghijklmnopqrtuvwxyz' . 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-let g:showmarks_ignore_type="h"
-let g:showmarks_textlower="\t"
-let g:showmarks_textupper="\t"
-let g:showmarks_textother="\t"
-let g:showmarks_auto_toggle = 0
-nnoremap <silent> mo :ShowMarksOn<CR>
-nnoremap <silent> mt :ShowMarksToggle<CR>
-
-hi ShowMarksHLl ctermfg=red   ctermbg=black
-hi ShowMarksHLu ctermfg=green ctermbg=black
-hi ShowMarksHLo ctermfg=red   ctermbg=black
-hi ShowMarksHLm ctermfg=red   ctermbg=black
-
-""""""""""""""""""""""""""""""
-" wokmarks
-""""""""""""""""""""""""""""""
-let g:wokmarks_do_maps = 0
-let g:wokmarks_pool = "abcdefghijklmnopqrtuvwxyz"
-map mm <Plug>ToggleMarkWok
-map mj <Plug>NextMarkWok
-map mk <Plug>PrevMarkWok
-autocmd User WokmarksChange :ShowMarksOn
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -202,3 +209,4 @@ nmap 5 <Esc>:tabn 5<Enter>
 nmap 6 <Esc>:tabn 6<Enter>
 nmap 7 <Esc>:tabn 7<Enter>
 nmap 8 <Esc>:tabn 8<Enter>
+
