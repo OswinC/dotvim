@@ -150,7 +150,11 @@ set backup
 set backupdir=$HOME/.vim/backup/
 silent execute '!mkdir -p $HOME/.vim/backup'
 
-syntax on
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
 set vb
 set noswapfile
 
@@ -210,3 +214,9 @@ nmap 6 <Esc>:tabn 6<Enter>
 nmap 7 <Esc>:tabn 7<Enter>
 nmap 8 <Esc>:tabn 8<Enter>
 
+" encoding settings
+set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
+set termencoding=utf-8
+set enc=utf-8
+set tenc=utf8
+set fenc=utf-8
