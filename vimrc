@@ -1,3 +1,9 @@
+if &term == "xterm-color" || &term == "xterm-16color"
+	set t_Co=16
+elseif ! has("gui_running")
+	set t_Co=256
+endif
+
 set nocompatible
 
 " Pathogen stuff, pathogen needs to be called before filetyp on
@@ -158,10 +164,6 @@ endif
 set vb
 set noswapfile
 
-" For Colorscheme
-set bg=dark
-colorscheme peaksea_new
-
 " highlight the cursorline
 set cursorline
 hi cursorline cterm=bold ctermbg=5
@@ -220,3 +222,7 @@ set termencoding=utf-8
 set enc=utf-8
 set tenc=utf8
 set fenc=utf-8
+
+" For Colorscheme
+set bg=dark
+colorscheme peaksea
