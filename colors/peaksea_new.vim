@@ -492,8 +492,8 @@ elseif &background=='dark'
     hi Comment		ctermfg=186	ctermbg=NONE	cterm=NONE
     hi Constant		ctermfg=110	ctermbg=NONE	cterm=NONE
     "String, Character Added By Kent
-    hi String		ctermfg=207	ctermbg=233	cterm=NONE  
-    hi Character	ctermfg=202	ctermbg=236	cterm=NONE  
+    hi String		ctermfg=134	ctermbg=NONE	cterm=NONE  
+    hi Character	ctermfg=210	ctermbg=NONE	cterm=NONE  
     hi Number		ctermfg=179	ctermbg=NONE	cterm=NONE
     hi Identifier	ctermfg=219	ctermbg=NONE	cterm=NONE
     hi Statement	ctermfg=153	ctermbg=NONE	cterm=NONE
@@ -508,7 +508,7 @@ elseif &background=='dark'
     " NOTE THIS IS IN THE COOL SECTION
     " hi CursorIM	ctermfg=16	ctermbg=201	cterm=NONE
     hi StatusLine	ctermfg=16	ctermbg=153	cterm=NONE
-    hi LineNr		ctermfg=240	ctermbg=232	cterm=NONE
+    hi LineNr		ctermfg=240	ctermbg=NONE	cterm=NONE
     hi Question		ctermfg=16	ctermbg=186	cterm=NONE
     hi ModeMsg		ctermfg=fg	ctermbg=18	cterm=NONE
     hi VisualNOS	ctermfg=fg	ctermbg=18	cterm=NONE
@@ -579,7 +579,7 @@ hi link		String		Constant
 " Character must be different from strings because in many languages
 " (especially C, C++) a 'char' variable is scalar while 'string' is pointer,
 " mistaken a 'char' for a 'string' will cause disaster!
-"hi link		Character	Number  "comment by Kent
+hi link		Character	Number
 hi link		SpecialChar	LineNr
 hi link		Tag		Identifier
 hi link		cCppOut		LineNr
