@@ -489,16 +489,16 @@ elseif &background=='dark'
     hi Normal		ctermfg=252	ctermbg=234	cterm=NONE
     " Comment/Uncomment the following line to disable/enable transparency
     "hi Normal		ctermfg=252	ctermbg=NONE	cterm=NONE
-    hi Comment		ctermfg=186	ctermbg=NONE	cterm=NONE
+    hi Comment		ctermfg=136	ctermbg=NONE	cterm=NONE
     hi Constant		ctermfg=110	ctermbg=NONE	cterm=NONE
     "String, Character Added By Kent
-    hi String		ctermfg=134	ctermbg=NONE	cterm=NONE  
+    hi String		ctermfg=115	ctermbg=NONE	cterm=NONE  
     hi Character	ctermfg=210	ctermbg=NONE	cterm=NONE  
     hi Number		ctermfg=179	ctermbg=NONE	cterm=NONE
     hi Identifier	ctermfg=219	ctermbg=NONE	cterm=NONE
     hi Statement	ctermfg=153	ctermbg=NONE	cterm=NONE
-    hi PreProc		ctermfg=84	ctermbg=NONE	cterm=NONE
-    hi Type		ctermfg=153	ctermbg=NONE	cterm=NONE
+    hi PreProc		ctermfg=181	ctermbg=NONE	cterm=NONE
+    hi Type		ctermfg=117	ctermbg=NONE	cterm=NONE
     hi Special		ctermfg=179	ctermbg=NONE	cterm=NONE
     hi Error		ctermfg=209	ctermbg=NONE	cterm=NONE
     hi Todo		ctermfg=88	ctermbg=186	cterm=NONE
