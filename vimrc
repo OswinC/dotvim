@@ -220,4 +220,4 @@ set fenc=utf-8
 
 " For Colorscheme
 set bg=dark
-colorscheme peaksea
+colorscheme peaksea_new
