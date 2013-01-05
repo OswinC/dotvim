@@ -142,6 +142,12 @@ endif
 "inoremap (<CR>   (<CR>)<ESC>O
 "inoremap [<CR>   [<CR>]<ESC>O
 
+" STOP using the arrow keys, Dude!
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 " Use `R` to Remove/delete linewise text without overwriting last yank
 nmap R "_dd
 vmap R "_d
