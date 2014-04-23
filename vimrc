@@ -227,3 +227,11 @@ set fenc=utf-8
 " For Colorscheme
 set bg=dark
 colorscheme peaksea_new
+
+"force vim diff to ignore whitespace
+set diffopt+=iwhite
+" highlight diff color
+hi diffchange ctermbg=236
+hi diffadd ctermbg=4
+hi DiffDelete ctermfg=69 ctermbg=234
+hi difftext ctermbg=3 ctermfg=0
