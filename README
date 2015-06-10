@@ -1,4 +1,4 @@
-installation:
+Installation:
 
 	git clone git://github.com/OswinC/dotvim ~/.vim
 
@@ -12,11 +12,11 @@ Switch to the `~/.vim` directory, and fetch submodules:
 	git submodule init
 	git submodule update
 
-With full features of this vim environment, following programs/libraries/settings are needed:
+To enable full features of this vim environment, following programs/libraries/settings are required:
 
 	llvm/clang
 	cscope
 	python
 	vim configured with --enable-pythoninterp --enable-gui=no --enable-cscope --enable-multibyte --enable-fontset --with-features=huge
-	set (let) g:clang_library_path to the directory path where libclang.so is contained
+	set (let) g:clang_library_path to the directory path where libclang.so can be found
 
