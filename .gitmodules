@@ -1,21 +1,21 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = git@github.com:majutsushi/tagbar.git
+	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/clangcomplete"]
 	path = bundle/clangcomplete
-	url = git://github.com/Rip-Rip/clang_complete.git
+	url = https://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
-	url = git://github.com/Lokaltog/vim-easymotion.git
+	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/showmarks"]
 	path = bundle/showmarks
-	url = git://github.com/bootleq/ShowMarks.git
+	url = https://github.com/bootleq/ShowMarks.git
