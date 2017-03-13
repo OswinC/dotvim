@@ -34,14 +34,14 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 filetype plugin indent on
 
 " Clang_Complete stuff
-let g:clang_complete_auto=1
-let g:clang_auto_select = 1
-let g:clang_use_library=1
+"let g:clang_complete_auto=1
+"let g:clang_auto_select = 1
+"let g:clang_use_library=1
 "let g:clang_library_path="$HOME/lib"
-let g:clang_snippets=1
-let g:clang_conceal_snippets=1
-let g:clang_periodic_quickfix=1
-let g:clang_hl_errors=1
+"let g:clang_snippets=1
+"let g:clang_conceal_snippets=1
+"let g:clang_periodic_quickfix=1
+"let g:clang_hl_errors=1
 
 " "Minibufexpl stuff
 " let g:miniBufExplMapCTabSwitchBufs = 1
@@ -105,6 +105,7 @@ set shiftround     " Round indent to multiple of shiftwidth
 set shiftwidth=4   " Number of spaces for each indent
 set tabstop=4      " Number of spaces for tab key
 set softtabstop=4  " Number of spaces for tab key while performing editing operations
+set expandtab      " Expand a tab to spaces
 
 set foldmethod=indent
 set foldlevel=1000
@@ -141,6 +142,21 @@ endif
 "inoremap {<CR>   {<CR>}<ESC>O 
 "inoremap (<CR>   (<CR>)<ESC>O
 "inoremap [<CR>   [<CR>]<ESC>O
+
+map [[ ?{<CR>w99[{
+map ][ /}<CR>b99]}
+map ]] j0[[%/{<CR>
+map [] k$][%?}<CR>
+
+" Tab navigation
+nnoremap tk  :tabfirst<CR>
+nnoremap tl  :tabnext<CR>
+nnoremap th  :tabprev<CR>
+nnoremap tj  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnew<Space>
+nnoremap tm  :tabm<Space>
+nnoremap tw  :tabclose<CR>
 
 " STOP using the arrow keys, Dude!
 map <up> <nop>
@@ -183,8 +199,8 @@ highlight User5 ctermfg=cyan
 highlight User6 ctermfg=white 
 
 " WinMerge-style (Alt + hjkl) mapping for vimdiff
-nmap j ]c
-nmap k [c
+"nmap j ]c
+"nmap k [c
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -192,30 +208,31 @@ nmap k [c
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " default 1000
 set timeoutlen=500
-nmap q <Esc>:qall<Enter>
+nmap <leader>tq <Esc>:qall<Enter>
 "nmap Q <Esc>:qall!<Enter>
-nmap w <Esc>:close<Enter>
-nmap W <Esc>:close!<Enter>
-nmap s <Esc>:write<Enter>
-nmap , <Esc>:tabprev<Enter>
+nmap <leader>tw <Esc>:close<Enter>
+nmap <leader>tW <Esc>:close!<Enter>
+nmap <leader>ts <Esc>:write<Enter>
+"nmap , <Esc>:tabprev<Enter>
 " Vim-Style alt+h, used for diff
 "ALT+ <-
-nmap OD <Esc>:tabprev<Enter>
+"nmap OD <Esc>:tabprev<Enter>
 
-nmap . <Esc>:tabnext<Enter>
+"nmap . <Esc>:tabnext<Enter>
 "Vim-Style alt+l, used for diff
 "ALT+ ->
-nmap OC <Esc>:tabnext<Enter>
-nmap t <Esc>:tabnew<Enter>
+"nmap OC <Esc>:tabnext<Enter>
+"nmap t <Esc>:tabnew<Enter>
 
-nmap 1 <Esc>:tabn 1<Enter>
-nmap 2 <Esc>:tabn 2<Enter>
-nmap 3 <Esc>:tabn 3<Enter>
-nmap 4 <Esc>:tabn 4<Enter>
-nmap 5 <Esc>:tabn 5<Enter>
-nmap 6 <Esc>:tabn 6<Enter>
-nmap 7 <Esc>:tabn 7<Enter>
-nmap 8 <Esc>:tabn 8<Enter>
+nmap <leader>t1 <Esc>:tabn 1<Enter>
+nmap <leader>t2 <Esc>:tabn 2<Enter>
+nmap <leader>t3 <Esc>:tabn 3<Enter>
+nmap <leader>t4 <Esc>:tabn 4<Enter>
+nmap <leader>t5 <Esc>:tabn 5<Enter>
+nmap <leader>t6 <Esc>:tabn 6<Enter>
+nmap <leader>t7 <Esc>:tabn 7<Enter>
+nmap <leader>t8 <Esc>:tabn 8<Enter>
+nmap <leader>t9 <Esc>:tabn 9<Enter>
 
 " encoding settings
 set fileencodings=utf-8,big5,euc-jp,gbk,euc-kr,utf-bom,iso8859-1
